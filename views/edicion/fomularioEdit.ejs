@@ -1,0 +1,45 @@
+<div class="container" style="background-color: rgb(190, 230, 232);">
+    <br>
+    <h2  style="text-align: center;">Ingreso de Productos</h2>
+    <div style="text-align: center;">
+<form action="/api/ingreso/<%=producto.id%>" method="post">
+    <div >
+    <label for="titulo">
+        <span>Nombre</span>
+            <input type="text" id="titulo" class="form-control" name="nombre" placeholder="" value=<%= producto.nombre %> >
+    </label>
+    </div>
+    <div >
+        <label for="titulo">
+            <span>Descripcion</span>
+            <input type="text" id="descripion" class="form-control" name="descripcion" placeholder="" value=<%= producto.descripcion %>>
+        </label>
+        </div>
+        <div class="mb-3">
+            <label for="precio">
+                <span>Codigo</span>
+                <input type="number" id="codigo" name="codigo" class="form-control" placeholder="" value=<%= producto.codigo%>>
+            </label>
+            </div>
+    <div class="mb-3">
+    <label for="precio">
+        <span>Precio</span>
+        <input type="number" id="precio" name="precio" class="form-control" placeholder="" value=<%= producto.precio %>>
+    </label>
+    </div>
+    <div class="mb-3">
+    <label for="ruta">
+        <span>URL del archivo</span>
+        <input type="text" id="nombre" class="form-control" name="ruta" placeholder="" value=<%= producto.ruta %>>
+    </label>
+    </div>
+    <div class="mb-3">
+        <label for="precio">
+            <span>stock</span>
+            <input type="number" id="stock" name="stock" class="form-control" placeholder="" value=<%= producto.stock %>>
+        </label>
+        </div>
+    <input type="submit" class="btn btn-primary" value="Guardar" >
+    </form>
+    </div>
+</div>
