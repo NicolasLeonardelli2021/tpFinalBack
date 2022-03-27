@@ -2,7 +2,7 @@
     <br>
     <h2  style="text-align: center;">Ingreso de Productos</h2>
     <div style="text-align: center;">
-<form action="/api/ingreso" method="POST">
+<form  id="formulario">
     <div >
     <label for="titulo">
         <span>Nombre</span>
@@ -10,13 +10,13 @@
     </label>
     </div>
     <div >
-        <label for="titulo">
+        <label for="descripcion">
             <span>Descripcion</span>
             <input type="text" id="descripion" class="form-control" name="descripcion" placeholder="">
         </label>
         </div>
         <div class="mb-3">
-            <label for="precio">
+            <label for="codigo">
                 <span>Codigo</span>
                 <input type="number" id="codigo" name="codigo" class="form-control" placeholder="">
             </label>
@@ -34,12 +34,12 @@
     </label>
     </div>
     <div class="mb-3">
-        <label for="precio">
+        <label for="stock">
             <span>stock</span>
             <input type="number" id="stock" name="stock" class="form-control" placeholder="">
         </label>
         </div>
-    <input type="submit" class="btn btn-primary" value="Agregar" >
+    <button type="submit" class="btn btn-primary" value="Agregar" > Enviar</button>
     </form>
     </div>
 </div>

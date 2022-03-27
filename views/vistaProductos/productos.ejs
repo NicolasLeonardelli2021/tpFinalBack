@@ -1,6 +1,6 @@
 
 <div class="items">
-<% for(producto of productos){ %>
+<% for(producto of array){ %>
 <div class="card" style="width: 18rem;">
     <img src="<%=producto.url %>" class="card-img-top" alt="...">
     <div class="card-body">
@@ -14,7 +14,8 @@
     </ul>
     <div class="card-body">
       <a href="/api/ingreso/<%=producto.id%> " class="card-link">Editar</a>
-      <a href="#" class="card-link">eliminar</a>
+    <button onclick="eliminar('<%=producto.id%>')">Eliminar</button> 
+    <button onclick="agregarProdCarrito('<%=producto.id%>')">Agregar al carrito</button>
     </div>
   </div>
   <%} %>

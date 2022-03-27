@@ -1,21 +1,22 @@
+
 const express = require("express")
-const {Router} = express;
+//const {Router} = express;
 const app = express()
-let {config} = require("./config")
-const router = new Router()
-let serverRoutes = require("./router")
+
+
+//const router = new Router()
+const serverRoutes = require("./router")
 
 app.use(express.json());                    
 app.use(express.urlencoded({extended:true}));
 
 app.set("views", "./views/ejs");
 app.set("view engine", "ejs");
-
-let productos = [];
-
+//app.use('/',router)
 
 serverRoutes(app)
-//app.use('/',router)
-app.listen(config.port, err=>{
-    console.log(`estamos escuchando en esta url: http://localhost:${config.port}/api/productos`)
+
+
+app.listen(8080, err=>{
+    console.log(`estamos escuchando en esta url: http://localhost:8080/api/productos`)
 })

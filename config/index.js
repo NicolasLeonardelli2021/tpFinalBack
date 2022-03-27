@@ -1,7 +1,9 @@
-require("dotenv").config();
-
+//require("dotenv").config();
+import dotenv from 'dotenv'
+//import 'dotenv'
 let config = {
-    port: process.env.PORT
+    //port: process.env.PORT
+    port: dotenv.process.env.PORT
 }
-
-module.exports = {config}
+export default config
+//module.exports = {config}
